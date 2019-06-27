@@ -4,7 +4,8 @@ import { render } from 'react-dom'
 
 import SketchContainer from './SketchContainer'
 import exampleSketch from './sketches/example'
-import styles from './styles.css'
+import bouncingSketch from './sketches/bouncing'
+import './styles.css'
 
 export default class App extends Component<*, *> {
   async componentDidMount() {
@@ -18,10 +19,7 @@ export default class App extends Component<*, *> {
   render() {
     return (
       <div>
-        <div className={styles.hello}>Hello world!</div>
-        {this.state && this.state.text && (
-          <div className={styles.helloApi}>{this.state.text}</div>
-        )}
+        <SketchContainer sketch={bouncingSketch} />
         <SketchContainer sketch={exampleSketch} />
       </div>
     )
