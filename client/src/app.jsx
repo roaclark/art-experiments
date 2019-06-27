@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
 
+import AsyncSketch from './AsyncSketch'
 import SketchContainer from './SketchContainer'
 import exampleSketch from './sketches/example'
 import bouncingSketch from './sketches/bouncing'
@@ -19,6 +20,7 @@ export default class App extends Component<*, *> {
   render() {
     return (
       <div>
+        <AsyncSketch />
         <SketchContainer sketch={bouncingSketch} />
         <SketchContainer sketch={exampleSketch} />
       </div>
