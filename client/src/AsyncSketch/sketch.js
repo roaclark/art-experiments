@@ -1,9 +1,10 @@
 export const WIDTH = 200
 export const HEIGHT = 100
 
+const FRAME_RATE = 60
+const BATCH_SIZE = 100
 const BACKGROUND_COLOR = 200
 const POINT_COLOR = 50
-const BATCH_SIZE = 50
 
 const points = []
 
@@ -17,6 +18,7 @@ export default p => {
   p.setup = function() {
     p.createCanvas(WIDTH, HEIGHT)
     p.background(BACKGROUND_COLOR)
+    p.frameRate(FRAME_RATE)
   }
 
   p.draw = function() {
