@@ -2,6 +2,8 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
 
+import SketchContainer from './SketchContainer'
+import exampleSketch from './sketches/example'
 import styles from './styles.css'
 
 export default class App extends Component<*, *> {
@@ -20,6 +22,7 @@ export default class App extends Component<*, *> {
         {this.state && this.state.text && (
           <div className={styles.helloApi}>{this.state.text}</div>
         )}
+        <SketchContainer sketch={exampleSketch} />
       </div>
     )
   }
